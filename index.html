@@ -1,37 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso Pedagógico da Inteligência Artificial</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uso Pedagógico da Inteligência Artificial</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="header">
-        <div class="container">
-            <h1>Uso Pedagógico da Inteligência Artificial</h1>
-            <p class="intro">
-                Este portal reúne materiais de estudo voltados ao uso da Inteligência Artificial na construção de planos de aula. 
-                Nosso foco principal é a otimização do seu tempo aliada à intencionalidade pedagógica.
-            </p>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">AI</div>
+        <div class="brand__text">
+          <h1 class="title">Uso Pedagógico da Inteligência Artificial</h1>
+          <p class="subtitle">Materiais de estudo para planejar com intencionalidade e ganhar tempo sem perder qualidade.</p>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="grid-container" id="button-grid">
-            </div>
-    </main>
-
-    <div class="modal-overlay" id="modal">
-        <div class="modal-content">
-            <button class="close-btn" id="close-modal">&times;</button>
-            <h2 id="modal-title">Título do Tema</h2>
-            <div id="modal-links" class="links-container">
-                </div>
-        </div>
+      </div>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main id="conteudo" class="main">
+    <section class="container section intro" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="section__title">Bem-vindo(a) ao portal</h2>
+      <p class="section__lead">
+        Este portal reúne materiais de estudo voltados ao uso da Inteligência Artificial na construção de planos de aula,
+        com foco em <strong>organização</strong>, <strong>intencionalidade pedagógica</strong> e <strong>otimização do tempo</strong>.
+        Recomendamos manter, no mínimo, <strong>planejamentos quinzenais</strong> e, sempre que possível, estruturar um
+        <strong>Plano A (plugado)</strong> e um <strong>Plano B (desplugado/contingência)</strong> para que o mesmo objetivo seja trabalhado de forma coesa.
+      </p>
+
+      <div class="callouts">
+        <article class="callout">
+          <h3 class="callout__title">A qualidade da pergunta importa</h3>
+          <p class="callout__text">
+            Quanto mais contexto você fornece (ano/turma, tempo de aula, recursos, atividade prática e avaliação),
+            mais adequada tende a ser a resposta da IA. A validação humana continua sendo essencial.
+          </p>
+        </article>
+
+        <article class="callout">
+          <h3 class="callout__title">Inclusão e acessibilidade</h3>
+          <p class="callout__text">
+            Planeje também versões adaptadas para estudantes elegíveis da educação especial, garantindo acessibilidade,
+            adequação metodológica e alinhamento às habilidades previstas.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="temas-title">
+      <div class="section__head">
+        <h2 id="temas-title" class="section__title">Materiais por tema</h2>
+        <p class="section__hint">Clique em um tema para abrir os links do material correspondente.</p>
+      </div>
+
+      <div id="topicsGrid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="container section" aria-labelledby="boas-praticas-title">
+      <div class="section__head">
+        <h2 id="boas-praticas-title" class="section__title">Boas práticas ao planejar com IA</h2>
+        <p class="section__hint">Use IA como apoio — a decisão pedagógica é sempre do docente.</p>
+      </div>
+
+      <div class="bp">
+        <div class="bp__card">
+          <h3 class="bp__title">O que a IA pode ajudar a fazer</h3>
+          <ul class="bp__list">
+            <li>Criar rascunhos de planos de aula e sequências didáticas.</li>
+            <li>Sugerir variações de atividades e níveis de complexidade.</li>
+            <li>Adaptar textos para diferentes níveis e perfis.</li>
+            <li>Organizar rubricas, checklists e etapas.</li>
+            <li>Reduzir tarefas burocráticas para sobrar tempo para a mediação.</li>
+          </ul>
+        </div>
+
+        <div class="bp__card">
+          <h3 class="bp__title">O que continua sendo responsabilidade do professor</h3>
+          <ul class="bp__list">
+            <li>Definir objetivo de aprendizagem e evidências de avaliação formativa.</li>
+            <li>Adequar ao contexto da turma e aos recursos disponíveis.</li>
+            <li>Garantir inclusão, acessibilidade e segurança.</li>
+            <li>Validar informações e ajustar a proposta com criticidade.</li>
+            <li>Manter coerência pedagógica entre Plano A e Plano B.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note">
+        <p class="note__text">
+          <strong>Dica rápida:</strong> escreva seu prompt incluindo: <em>ano/série</em>, <em>tempo de aula</em>,
+          <em>número de alunos</em>, <em>atividade prática</em>, <em>avaliação</em>, <em>Plano A/Plano B</em> e <em>estratégias de inclusão</em>.
+        </p>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="exemplos-title">
+      <div class="section__head">
+        <h2 id="exemplos-title" class="section__title">Exemplos de adaptação para Aulas de Tecnologia</h2>
+        <p class="section__hint">
+          Exemplos prontos de prompts (Plano A e Plano B) para você usar no ChatGPT, Gemini ou ferramentas similares.
+        </p>
+      </div>
+
+      <div class="examples">
+        <article class="example" data-example="python">
+          <div class="example__top">
+            <h3 class="example__title">Exemplo 1 — Tecnologia e Programação (Python simples)</h3>
+            <button class="btn btn--ghost js-copy" type="button" data-copy="pythonPrompt">
+              Copiar prompt
+            </button>
+          </div>
+
+          <p class="example__desc">Plano de aula de 50 minutos sobre “Introdução a Variáveis” para iniciantes, com Plano A (Replit) e Plano B (desplugado).</p>
+
+          <pre class="code" id="pythonPrompt"><code>Atue como um professor especialista em Tecnologia e Programação. Crie um plano de aula de 50 minutos sobre "Introdução a Variáveis" para uma turma de iniciantes. Seguindo boas práticas pedagógicas, estruture o plano da seguinte forma:
+1) Objetivo de aprendizagem claro e como faremos a avaliação formativa.
+2) Plano A (Ideal/Plugado): Uma atividade prática onde os alunos usarão um ambiente online simples (como o Replit) para programar em Python um código básico que armazena nomes e idades e imprime na tela.
+3) Plano B (Contingência/Desplugado): Uma atividade sem uso de computadores ou internet, mantendo o mesmo objetivo de ensinar o conceito de variáveis. Sugira o uso de caixas de papelão ou copos plásticos etiquetados para representar a "memória" do computador.</code></pre>
+        </article>
+
+        <article class="example" data-example="makecode">
+          <div class="example__top">
+            <h3 class="example__title">Exemplo 2 — Tecnologia e Robótica (MakeCode simples)</h3>
+            <button class="btn btn--ghost js-copy" type="button" data-copy="makecodePrompt">
+              Copiar prompt
+            </button>
+          </div>
+
+          <p class="example__desc">Plano de aula de 50 minutos sobre “Lógica Condicional (Se/Então)” para EF II, com MakeCode + micro:bit e alternativa desplugada.</p>
+
+          <pre class="code" id="makecodePrompt"><code>Atue como um professor de Robótica Educacional. Elabore um plano de aula detalhado de 50 minutos sobre "Lógica Condicional (Se/Então)" para alunos do Ensino Fundamental II.
+Quero que o plano contenha:
+1) O objetivo principal e estratégias de inclusão para alunos com diferentes perfis.
+2) Plano A (Ideal): Uso da plataforma Microsoft MakeCode para programar um micro:bit virtual (ou físico). A missão dos alunos deve ser criar um sistema simples onde um LED acende "SE" o botão A for pressionado, "SENÃO" ele apaga.
+3) Plano B (Desplugado): Uma dinâmica de sala de aula (como um jogo de instruções ou "mestre mandou" modificado) para ensinar a mesma lógica condicional sem o uso de telas ou placas, caso não haja acesso à internet.</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">
+          Feito para apoiar o planejamento docente com IA: organização, intencionalidade, tempo e coerência pedagógica.
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" data-close="true"></div>
+
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__header">
+        <h3 id="modalTitle" class="modal__title">Tema</h3>
+        <button class="icon-btn" type="button" aria-label="Fechar" data-close="true">✕</button>
+      </div>
+
+      <div class="modal__body">
+        <p class="modal__desc" id="modalDesc"></p>
+        <ul class="links" id="modalLinks"></ul>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn" type="button" data-close="true">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
